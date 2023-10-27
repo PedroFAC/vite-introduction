@@ -1,11 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 
-export default defineConfig(({ command, mode, ssrbuild }) => {
-  //   console.log({ command, mode, ssrbuild });
-  if (mode == "production") {
-    return {
-      base: "/vite/",
-    };
-  }
+export default defineConfig((command, mode) => {
+  const env = loadEnv(mode, process.cwd(), "VITE_");
+
+  console.log(env);
+
   return {};
 });
