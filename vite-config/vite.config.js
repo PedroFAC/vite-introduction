@@ -3,8 +3,10 @@ import { defineConfig, loadEnv } from "vite";
 export default defineConfig({
   clearScreen: false,
   envPrefix: "APP_",
-  logLevel: "silent",
+  //   logLevel: "silent",
+  //   envDir: "direnv",
   server: {
+    // open: "index.html",
     port: 3000,
     // strictPort: true,
   },
